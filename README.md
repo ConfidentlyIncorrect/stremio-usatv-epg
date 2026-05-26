@@ -23,7 +23,7 @@ Electronic Program Guide for [USATV](https://848b3516657c-usatv.baby-beamup.club
 ### Docker Compose (recommended)
 
 ```bash
-git clone https://github.com/cat5edopeHA/stremio-usatv-epg.git
+git clone https://github.com/ConfidentlyIncorrect/stremio-usatv-epg.git
 cd stremio-usatv-epg
 docker compose up -d
 ```
