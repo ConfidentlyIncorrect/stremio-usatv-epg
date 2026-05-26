@@ -8,7 +8,7 @@ services:
     environment:
       - PORT=7001
       - EPG_URL=https://epg.pw/xmltv/epg_US.xml
-      - TZ=America/New_York
+      - TZ=America/Denver
       - NODE_OPTIONS=--max-old-space-size=3072
     deploy:
       resources:
