@@ -4,7 +4,7 @@ const path = require('path');
 const epg = require('./epg');
 
 const USATV_CATALOG_URL = process.env.USATV_BASE_URL
-    || 'https://848b3516657c-usatv.baby-beamup.club/catalog/tv/all.json';
+    || 'https://raw.githubusercontent.com/ConfidentlyIncorrect/usa-tv-next/refs/heads/main/catalog/tv/all.json';
 const CACHE_FILE = path.join(__dirname, '..', 'channels-cache.json');
 
 let ustvChannels = [];
