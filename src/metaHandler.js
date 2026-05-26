@@ -55,18 +55,29 @@ async function handleMeta({ type, id }) {
             descLines.push('The channel is still playable via the USATV addon.');
         }
 
-        return {
-            meta: {
-                id: ch.id, type: 'tv', name: ch.name,
-                poster: ch.poster || ch.logo || FALLBACK_POSTER,
-                posterShape: 'landscape',
-                logo: ch.logo || '', background: ch.poster || '',
-                description: descLines.join('\n'),
-                genres: ch.genres || [ch.genre].filter(Boolean),
-                releaseInfo: now ? now.title : undefined,
-            },
-            cacheMaxAge: META_CACHE_SECS
-        };
+      return {
+    meta: {
+        id: ch.id,
+        type: 'tv',
+        name: ch.name,
+
+        poster: ch.poster || ch.logo || FALLBACK_POSTER,
+        posterShape: 'landscape',
+        logo: ch.logo || '',
+        background: ch.poster || '',
+
+        // MAIN FIELD (Stremio standard)
+        description: descLines.join('\n'),
+
+        // COMPATIBILITY DUPLICATION (this is what you want)
+        plot: descLines.join('\n'),
+        overview: descLines.join('\n'),
+
+        genres: ch.genres || [ch.genre].filter(Boolean),
+        releaseInfo: now ? now.title : undefined,
+    },
+    cacheMaxAge: META_CACHE_SECS
+};
     } catch (err) {
         console.error('[MetaHandler] Error:', err.message);
         return { meta: {}, cacheMaxAge: 60 };
