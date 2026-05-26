@@ -9,7 +9,7 @@ function formatTime(date) {
     if (!date) return '';
     return date.toLocaleTimeString('en-US', {
         hour: 'numeric', minute: '2-digit', hour12: true,
-        timeZone: process.env.TZ || 'America/New_York'
+        timeZone: process.env.TZ || 'America/Denver'
     });
 }
 
