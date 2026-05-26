@@ -18,9 +18,12 @@ async function main() {
         await channelMap.refresh();
     });
 
-    serveHTTP(addonInterface, { port: PORT });
-    console.log(`[USATV-EPG] Addon running at http://localhost:${PORT}`);
-    console.log(`[USATV-EPG] Manifest: http://localhost:${PORT}/manifest.json`);
+    serveHTTP(addonInterface, {
+    port: PORT,
+    host: '0.0.0.0'
+});
+    console.log(`[USATV-EPG] Addon running at http://0.0.0.0:${PORT}`);
+    console.log(`[USATV-EPG] Manifest: http://0.0.0.0:${PORT}/manifest.json`);
 }
 
 main().catch(err => {
