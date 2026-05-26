@@ -4,7 +4,7 @@ const channelMap = require('./channelMap');
 
 const PAGE_SIZE = 100;
 const CATALOG_CACHE_SECS = 300;
-const FALLBACK_POSTER = 'https://848b3516657c-usatv.baby-beamup.club/public/logo.png';
+const FALLBACK_POSTER = 'https://raw.githubusercontent.com/ConfidentlyIncorrect/usa-tv-next/main/public/logo.png';
 
 function formatTime(date) {
     if (!date) return '';
