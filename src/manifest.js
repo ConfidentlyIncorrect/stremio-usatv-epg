@@ -4,7 +4,7 @@ const manifest = {
     version: '1.0.0',
     name: 'USATV EPG Guide',
     description: 'Electronic Program Guide for USATV addon channels. Shows what\'s currently playing and upcoming programs.',
-    logo: 'https://848b3516657c-usatv.baby-beamup.club/public/logo.png',
+    logo: 'https://raw.githubusercontent.com/ConfidentlyIncorrect/usa-tv-next/main/public/logo.png',
 
     catalogs: [
         {
